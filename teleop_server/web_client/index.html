@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROS2 Teleop Web Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="left-panel">
+            <div id="joystick"></div>
+        </div>
+        <div id="right-panel">
+            <div id="video-section">
+                <canvas id="video-canvas"></canvas>
+            </div>
+            <div id="map-section">
+                <canvas id="map-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="joystick.js"></script>
+    <script src="map_viewer.js"></script>
+    <script src="video_player.js"></script>
+</body>
+</html>
