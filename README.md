@@ -12,19 +12,20 @@ A modular, mobile-friendly teleoperation dashboard for ROS2 robots, featuring re
 
 ## Project Structure
 ```
-teleop_server/
-├── ros2_bridge.py          # ROS2 node: subscriptions/publications
-├── websocket_server.py     # WebSocket server for client comms
-├── video_streamer.py       # Camera feed streaming handler
-├── map_handler.py          # Map data processing/transmission
-├── teleop_controller.py    # Teleop command processing
-├── main.py                 # Application entry point
-└── web_client/
-    ├── index.html          # Main UI layout
-    ├── joystick.js         # Virtual joystick
-    ├── map_viewer.js       # Map visualization
-    ├── video_player.js     # Camera feed display
-    └── styles.css          # Responsive styling
+phone-teleop/
+├── main.py                  # Application entry point
+├── ros2_bridge.py           # ROS2 node: subscriptions/publications
+├── websocket_server.py      # WebSocket server for client comms
+├── video_streamer.py        # Camera feed streaming handler
+├── map_handler.py           # Map data processing/transmission
+├── teleop_controller.py     # Teleop command processing
+├── web_client/
+│   ├── index.html           # Main UI layout
+│   ├── joystick.js          # Virtual joystick
+│   ├── map_viewer.js        # Map visualization
+│   ├── video_player.js      # Camera feed display
+│   └── styles.css           # Responsive styling
+└── README.md
 ```
 
 ## Setup Instructions
@@ -38,13 +39,12 @@ pip3 install rclpy websockets opencv-python numpy cv_bridge
 
 ### 2. Run the Backend
 ```bash
-cd teleop_server
 python3 main.py
 ```
 
 ### 3. Serve the Web Client
 ```bash
-cd teleop_server/web_client
+cd web_client
 python3 -m http.server 8080
 ```
 
